@@ -151,12 +151,12 @@ const RecipeSearch: React.FC = () => {
               </p>
             </div>
             <a
-              className="w-28 h-8 flex items-center justify-center rounded-lg m-5 bg-[#7C9473] text-[#F0EBE3]"
+              className="w-44 h-8 flex items-center justify-center rounded-lg m-5 bg-[#7C9473] text-[#F0EBE3]"
               href={recipe.url}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Ver Receita
+              Ver Receita Completa
             </a>
           </div>
         ))}
