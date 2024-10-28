@@ -111,33 +111,35 @@ const RecipeSearch: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen font-sans">
-      <h1 className="text-3xl text-[#7C9473]">Buscador de Receitas</h1>
-      <div className="flex flex-col justify-center items-center ">
-        <input
-          className="flex flex-col w-52 text-[#9D9D9D] rounded-lg  border-gray-300 p-2 m-5 transition-colors text-center placeholder:text-center"
-          type="text"
-          value={ingredient}
-          onChange={(e) => setIngredient(e.target.value)}
-          placeholder="Digite um ingrediente"
-        />
-        <button
-          className=" bg-[#7C9473] text-[#F0EBE3] w-52 h-10 rounded-lg p-2 mt-3"
-          onClick={handleSearch}
-          disabled={loading}
-        >
-          {loading ? "Carregando..." : "Buscar Receitas"}
-        </button>
-      </div>
+      <section className="pesquisa">
+        <h1 className="text-3xl text-[#7C9473]">Buscador de Receitas</h1>
+        <div className="flex flex-col justify-center items-center ">
+          <input
+            className="flex flex-col w-52 text-[#9D9D9D] rounded-lg  border-gray-300 p-2 m-5 transition-colors text-center placeholder:text-center"
+            type="text"
+            value={ingredient}
+            onChange={(e) => setIngredient(e.target.value)}
+            placeholder="Digite um ingrediente"
+          />
+          <button
+            className=" bg-[#7C9473] text-[#F0EBE3] w-52 h-10 rounded-lg p-2 mt-3"
+            onClick={handleSearch}
+            disabled={loading}
+          >
+            {loading ? "Carregando..." : "Buscar Receitas"}
+          </button>
+        </div>
+      </section>
       <div>
         {error && <p style={{ color: "red" }}>{error}</p>}
         {/* {recipes.length === 0 && !loading && <p>Nenhuma receita encontrada.</p>} */}
         {recipes.map(({ recipe }, index) => (
           <div
             key={index}
-            className=" grid m-5 p-4 items-center justify-center font-sans m-8"
+            className="flex flex-col m-5 p-4 items-center justify-center font-sans"
           >
-            <h3 className="text-lg text-[#7C9473]">{recipe.label}</h3>
-            <div className="flex items-center justify-center">
+            <h3 className="text-3xl text-[#A5B68D]">{recipe.label}</h3>
+            <div className="flex items-center justify-start">
               <img
                 src={recipe.image}
                 alt={recipe.label}
