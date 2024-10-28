@@ -110,10 +110,10 @@ const RecipeSearch: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen font-sans">
-      <section className="pesquisa">
+    <div className="flex flex-col items-center justify-start h-screen font-sans">
+      <section className="mt-8">
         <h1 className="text-3xl text-[#7C9473]">Buscador de Receitas</h1>
-        <div className="flex flex-col justify-center items-center ">
+        <div className="flex flex-col justify-start items-center ">
           <input
             className="flex flex-col w-52 text-[#9D9D9D] rounded-lg  border-gray-300 p-2 m-5 transition-colors text-center placeholder:text-center"
             type="text"
@@ -130,7 +130,7 @@ const RecipeSearch: React.FC = () => {
           </button>
         </div>
       </section>
-      <div>
+      <div className="w-[720px] flex flex-col justify-center items-center">
         {error && <p style={{ color: "red" }}>{error}</p>}
         {/* {recipes.length === 0 && !loading && <p>Nenhuma receita encontrada.</p>} */}
         {recipes.map(({ recipe }, index) => (
@@ -145,7 +145,10 @@ const RecipeSearch: React.FC = () => {
                 alt={recipe.label}
                 style={{ width: "100px", height: "auto", margin: "20px" }}
               />
-              <p>Ingredientes: {recipe.ingredientLines.join(", ")}</p>
+              <p>
+                <strong>Ingredientes:</strong>{" "}
+                {recipe.ingredientLines.join(", ")}
+              </p>
             </div>
             <a
               className="w-28 h-8 flex items-center justify-center rounded-lg m-5 bg-[#7C9473] text-[#F0EBE3]"

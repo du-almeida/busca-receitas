@@ -527,6 +527,9 @@ video {
 .mt-3 {
   margin-top: 0.75rem;
 }
+.mt-8 {
+  margin-top: 2rem;
+}
 .flex {
   display: flex;
 }
@@ -544,6 +547,9 @@ video {
 }
 .w-52 {
   width: 13rem;
+}
+.w-\[720px\] {
+  width: 720px;
 }
 .flex-col {
   flex-direction: column;
@@ -584,10 +590,6 @@ video {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
 .text-\[\#7C9473\] {
   --tw-text-opacity: 1;
   color: rgb(124 148 115 / var(--tw-text-opacity));
@@ -596,13 +598,13 @@ video {
   --tw-text-opacity: 1;
   color: rgb(157 157 157 / var(--tw-text-opacity));
 }
-.text-\[\#F0EBE3\] {
-  --tw-text-opacity: 1;
-  color: rgb(240 235 227 / var(--tw-text-opacity));
-}
 .text-\[\#A5B68D\] {
   --tw-text-opacity: 1;
   color: rgb(165 182 141 / var(--tw-text-opacity));
+}
+.text-\[\#F0EBE3\] {
+  --tw-text-opacity: 1;
+  color: rgb(240 235 227 / var(--tw-text-opacity));
 }
 .antialiased {
   -webkit-font-smoothing: antialiased;
@@ -615,13 +617,13 @@ video {
 }
 
 :root {
-  --background: #F6F5F2;
+  --background: #EEEEEE;
   --foreground: #555555;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #F6F5F2;
+    --background: #EEEEEE;
     --foreground: #555555;
   }
 }
