@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F0EBE3;
+  --foreground: #555555;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #F0EBE3;
+    --foreground: #555555;
   }
 }
 
@@ -19,3 +19,11 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* .inputPesquisa{
+  border-color: pink;
+}
+
+.inputPesquisa:focus {
+  border-color: rgb(197, 24, 53); /* Garante que a borda fique rosa ao focar
+} */
